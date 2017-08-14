@@ -1,0 +1,124 @@
+---My Details---
+Name: Satyam Mittal
+Roll Number: 201501020
+Finding Stop Words
+-------
+---Native Language---Hindi----
+के
+में
+है।
+की
+का
+से
+और
+एक
+को
+है
+पर
+हैं।
+भी
+यह
+इस
+किया
+ने
+लिए
+जो
+जाता
+कि
+रूप
+ही
+है,
+कर
+करने
+गया
+या
+हो
+द्वारा
+था।
+हैं
+नहीं
+साथ
+होता
+तक
+तथा
+बाद
+भारत
+अपने
+इसके
+कुछ
+नाम
+जा
+अन्य
+कई
+वह
+करते
+समय
+वे
+------End-------
+
+---Bahasa Corpus---
+yang
+di
+dan
+dengan
+untuk
+dari
+ini
+itu
+dalam
+akan
+juga
+tidak
+pada
+ke
+ada
+saat
+sudah
+bisa
+menjadi
+kata
+oleh
+sebagai
+karena
+tersebut
+kepada
+atau
+Kamis
+tahun
+adalah
+lebih
+satu
+telah
+seperti
+masih
+hanya
+bahwa
+melakukan
+Indonesia
+mereka
+harus
+bagi
+kita
+merupakan
+saya
+kami
+dilakukan
+para
+belum
+dua
+tak
+-----End-----
+----Approach---
+1) Finding Native language(Hindi) stop words using hiwiki corpus
+	a) using the wikidump, i download the database dump in xml form.
+	b) using the wikiextractor, i extracts the clean text from that in multiple files of json format.
+	c) after that i parse each json file and get the term-frequency(tf) and document-frequency(df) of each word using hashmaps.
+	d) after i obtain tf and df of each word, I obtain the tf-df2 of each word that is eqauls to tf*df*df. tf-df2 = tf*df*df.
+	e) The reason behind using tf-df2 is that some specific words occur more in a paragraph but not in all documents due to term specific document. Thats why it is required to multiple document frequency to term frequency. As stop words usually occur in all documents. Reason behind using square for df is increasing some more weight to document frequency.
+	f) The list is given above.
+2) Using Bahasa Corpus as given in out.txt
+	a) I used the desc element in jsonobject present in the json file.
+	b) after that i parse each json file and get the term-frequency(tf) and document-frequency(df) of each word using hashmaps.
+	c) after i obtain tf and df of each word, I obtain the tf-df2 of each word that is eqauls to tf*df*df. tf-df2 = tf*df*df.
+	d) the list is given above.
+-----End-----
