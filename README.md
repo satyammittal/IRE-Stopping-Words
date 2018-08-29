@@ -4,10 +4,14 @@ https://dumps.wikimedia.org/backup-index.html
 
 # Hindi Corpus
 a) hindi.py > hindi_out.py
+
 b) hiwiki.xml
+
 c) extracted folder
+
 d) WikiExtractor.py -b 250K -o extracted --json hiwiki.bz2
 
 # Bahasa Corpus
 a) bahasa.py
+
 b) check.py to check the solution with real stopping words
